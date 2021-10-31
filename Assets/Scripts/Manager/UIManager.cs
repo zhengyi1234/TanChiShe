@@ -16,14 +16,14 @@ public class UIManager : MonoBehaviour
         text_len.text = 15.ToString();
         canv.SetActive(false);
       
-        
 
     }
 
     // Update is called once per frame
     void Update()
     {
-          len_add();
+        Kill();
+        len_add();
         if (GameManager.instance.hit_wall)
         {
             ShowCan();
@@ -48,6 +48,11 @@ public class UIManager : MonoBehaviour
         canv.SetActive(true);
        
     }
-
-  
+    /// <summary>
+    /// kill增加
+    /// </summary>
+   public void Kill()
+    {
+        text_kill.text = GameManager.instance.kill.ToString();
+    }
 }

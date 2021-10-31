@@ -20,18 +20,13 @@ public class GameManager : MonoBehaviour
     public bool hit_wall=false;
 
     public float threshold=0.1f;
+    public bool act = false;
 
-    private void Start()
+
+    public void kill_add()
     {
-       
+        kill+=1;
     }
-
-    private void Update()
-    {
-      
-    }
-
-
 
 
 }
